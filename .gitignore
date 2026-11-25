@@ -1,0 +1,90 @@
+# This file must be named ".gitignore" in the repo.
+
+# ---------------------------------------------------------------
+# Environment files and secrets
+# ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+# Also block a copy saved without the dot by mistake
+env
+
+# Credential and key files
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+*service-account*.json
+secrets/
+*.secret
+
+# ---------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# ---------------------------------------------------------------
+# Frontend (React / Vite)
+# ---------------------------------------------------------------
+node_modules/
+.vite/
+coverage/
+
+# ---------------------------------------------------------------
+# Local databases and data files
+# ---------------------------------------------------------------
+*.sqlite
+*.sqlite3
+*.db
+mongodb-data/
+postgres-data/
+pgdata/
+chroma_db/
+.chroma/
+data/local/
+
+# Local Docker overrides (may contain passwords)
+docker-compose.override.yml
+
+# ---------------------------------------------------------------
+# Logs, temporary files and build output
+# ---------------------------------------------------------------
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.temp
+build/
+dist/
+
+# Jupyter files
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------
+# IDE, OS and Office files
+# ---------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
